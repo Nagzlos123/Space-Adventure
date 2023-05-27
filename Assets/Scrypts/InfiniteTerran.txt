@@ -1,0 +1,121 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+
+public class InfiniteTerran : MonoBehaviour
+{
+    public const float maxViewDst = 450;
+    public Transform viewer;
+    static MapGenerator mapGenerator;
+    public Material mapMaterial;
+    public static Vector2 viewerPosition;
+    int partSize;
+    int partsVisibleInViewDst;
+
+    Dictionary<Vector2, TerrainPart> terrainPartDictionary = new Dictionary<Vector2, TerrainPart>();
+    List<TerrainPart> terrainPartVisibleLast = new List<TerrainPart>();
+
+    void Start()
+    {
+        mapGenerator = FindObjectOfType<MapGenerator>();
+        partSize = MapGenerator.mapPartSize - 1;
+        partsVisibleInViewDst = Mathf.RoundToInt(maxViewDst / partSize);
+    }
+
+    void Update()
+    {
+        viewerPosition = new Vector2(viewer.position.x, viewer.position.z);
+        UpdateVisibleChunks();
+    }
+
+    void UpdateVisibleChunks()
+    {
+
+        for (int i = 0; i < terrainPartVisibleLast.Count; i++)
+        {
+            terrainPartVisibleLast[i].SetVisible(false);
+        }
+        terrainPartVisibleLast.Clear();
+
+        int currentChunkCoordX = Mathf.RoundToInt(viewerPosition.x / partSize);
+        int currentChunkCoordY = Mathf.RoundToInt(viewerPosition.y / partSize);
+
+        for (int yOffset = -partsVisibleInViewDst; yOffset <= partsVisibleInViewDst; yOffset++)
+        {
+            for (int xOffset = -partsVisibleInViewDst; xOffset <= partsVisibleInViewDst; xOffset++)
+            {
+                Vector2 viewedChunkCoord = new Vector2(currentChunkCoordX + xOffset, currentChunkCoordY + yOffset);
+
+                if (terrainPartDictionary.ContainsKey(viewedChunkCoord))
+                {
+                    terrainPartDictionary[viewedChunkCoord].UpdateTerrainPart();
+                    if (terrainPartDictionary[viewedChunkCoord].IsVisible())
+                    {
+                        terrainPartVisibleLast.Add(terrainPartDictionary[viewedChunkCoord]);
+                    }
+                }
+                else
+                {
+                    terrainPartDictionary.Add(viewedChunkCoord, new TerrainPart (viewedChunkCoord, partSize, transform, mapMaterial));
+                }
+
+            }
+        }
+    }
+
+    public class TerrainPart
+    {
+
+        GameObject meshObject;
+        Vector2 position;
+        Bounds bounds;
+        MeshRenderer meshRenderer;
+        MeshFilter meshFilter;
+
+        
+        public TerrainPart(Vector2 coord, int size, Transform parent, Material material)
+        {
+            position = coord * size;
+            bounds = new Bounds(position, Vector2.one * size);
+            Vector3 positionV3 = new Vector3(position.x, 0, position.y);
+
+            meshObject = new GameObject("Terrain Part");
+            meshRenderer = meshObject.AddComponent<MeshRenderer>();
+            meshFilter = meshObject.AddComponent<MeshFilter>();
+            meshObject.transform.position = positionV3;
+            meshRenderer.material = material;
+            meshObject.transform.parent = parent;
+            SetVisible(false);
+            mapGenerator.MapDataRequest(OnMapDataResived);
+        }
+        void OnMapDataResived(MapData mapData)
+        {
+            mapGenerator.MeshDataRequest(mapData, OnMeshDataResived);
+        }
+
+
+        void OnMeshDataResived(MeshData meshData)
+        {
+
+            meshFilter.mesh = meshData.CreateMesh();
+        }
+        public void UpdateTerrainPart()
+        {
+            float viewerDstFromNearestEdge = Mathf.Sqrt(bounds.SqrDistance(viewerPosition));
+            bool visible = viewerDstFromNearestEdge <= maxViewDst;
+            SetVisible(visible);
+        }
+
+        public void SetVisible(bool visible)
+        {
+            meshObject.SetActive(visible);
+        }
+
+        public bool IsVisible()
+        {
+            return meshObject.activeSelf;
+        }
+
+    }
+}

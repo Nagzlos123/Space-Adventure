@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/GIU Scees/MainMenu.unity
+    guid: 323d6c7e13a6d7845b99d95b1cba630f
+  - enabled: 1
+    path: Assets/Scenes/GIU Scees/GameWin.unity
+    guid: 4bf1194a8d1ec3340adca72c88ca2bd9
+  - enabled: 1
+    path: Assets/Scenes/GIU Scees/KosmosPanel.unity
+    guid: 38ed26caa94ed994f93dca9dab65aeda
+  - enabled: 1
+    path: Assets/Scenes/Kosmos Levels/BLevel1.unity
+    guid: 96395410684a55744a874ae55db0b34c
+  - enabled: 1
+    path: Assets/Scenes/Kosmos Levels/BLevel3.unity
+    guid: cd7de9126676e0944924a2ba2cdfcbb3
+  - enabled: 1
+    path: Assets/Scenes/Kosmos Levels/BLevel2.unity
+    guid: 1699f3c069d7d94469301b54adabf3dc
+  - enabled: 1
+    path: Assets/Scenes/Kosmos Levels/BLevel4.unity
+    guid: 3c74307fc4d4c79498276d38d821e052
+  - enabled: 1
+    path: Assets/Scenes/Kosmos Levels/BLevel5.unity
+    guid: 166586e97392b674ca5bbfadaba62fc8
+  - enabled: 1
+    path: Assets/Scenes/Kosmos Levels/BLevel6.unity
+    guid: 7ff4cc96b42aaf247a722e46f611900d
+  - enabled: 1
+    path: Assets/Scenes/Kosmos Levels/BLevel7.unity
+    guid: 65aeab5a63c13ca43a70f0c01b0a9361
+  - enabled: 1
+    path: Assets/Scenes/Kosmos Levels/BLevel8.unity
+    guid: 7f67d5f1a801a6642b763aa8e38268a6
+  - enabled: 1
+    path: Assets/Scenes/Kosmos Levels/BLevel9.unity
+    guid: 091b0eb00c0ee79459dd57ad54a36ca2
+  - enabled: 1
+    path: Assets/Scenes/GIU Scees/GameOver.unity
+    guid: 6e587c90a0692994f97db63619c14803
+  - enabled: 1
+    path: Assets/Scenes/P1/P1Level1.unity
+    guid: 1c035b66a08c6674cbf4b0d85045218f
+  - enabled: 1
+    path: Assets/Scenes/P1/P1Level2.unity
+    guid: c70b61b9f83365e4b993973a1c4f63f0
+  - enabled: 1
+    path: Assets/Scenes/P1/P1Level3.unity
+    guid: d0ef9bff48c8b3f41aa98f915c27e0f9
+  - enabled: 1
+    path: Assets/Scenes/P1/P1Level4.unity
+    guid: 2f3ae39caf8dd02468199957db8764c7
+  - enabled: 1
+    path: Assets/Scenes/P2/P2Level1.unity
+    guid: 4ecac1ff353c00846a93aad7f98dc734
+  - enabled: 1
+    path: Assets/Scenes/P2/P2Level2.unity
+    guid: 40d8ce8584a7b3c4ab09b84f4d7a41d6
+  - enabled: 1
+    path: Assets/Scenes/P2/P2Level3.unity
+    guid: 69b401afb94e2554595b0f0ae59caf82
+  - enabled: 1
+    path: Assets/Scenes/P2/P2Level4.unity
+    guid: e19d49de642a866449a386754c058765
+  - enabled: 1
+    path: Assets/Scenes/P3/P3Level1.unity
+    guid: 83de336a8e4c9874d9a85acb828bb971
+  - enabled: 1
+    path: Assets/Scenes/P3/P3Level2.unity
+    guid: d5b23e59207b1204c8f516615d203ad8
+  - enabled: 1
+    path: Assets/Scenes/P3/P3Level3.unity
+    guid: 170449215a047fc4bb3609d6057835de
+  - enabled: 1
+    path: Assets/Scenes/P3/P3Level4.unity
+    guid: c432e2b5692ea1e47af25e31311932d3
+  - enabled: 1
+    path: Assets/Scenes/P4/P4Level1.unity
+    guid: e05b15736f22c214a81001153b917412
+  - enabled: 1
+    path: Assets/Scenes/P4/P4Level2.unity
+    guid: 8c5690e3e3a913f46b2dc7bde21645f3
+  - enabled: 1
+    path: Assets/Scenes/P4/P4Level3.unity
+    guid: 7abdc00305bba2349863bc7a31076d64
+  - enabled: 1
+    path: Assets/Scenes/P4/P4Level4.unity
+    guid: b7822c80ff61bbd4cacd6ca1eea4e059
+  - enabled: 1
+    path: Assets/Scenes/Kosmos Levels/SLevel1.unity
+    guid: 8c188c37f115f4e4e98264d0fe374c27
+  - enabled: 1
+    path: Assets/Scenes/Kosmos Levels/SLevel2.unity
+    guid: 78936e6de8de6a74ab2ff2ad3b08a324
+  - enabled: 1
+    path: Assets/Scenes/Kosmos Levels/SLevel3.unity
+    guid: 37cd22a716933d046b1532b387729a78
+  - enabled: 1
+    path: Assets/Scenes/SLevel4.unity
+    guid: 125d5c402940b3b46b7bc143a690af4d
+  - enabled: 1
+    path: Assets/Scenes/GIU Scees/GameWin2.unity
+    guid: ebaee6a74fef21f42a324f52bf04a5fd
+  - enabled: 1
+    path: Assets/Scenes/GIU Scees/GameCompleted.unity
+    guid: 328f0df46dcc47e408e5a51a2d26c4c7
+  m_configObjects: {}
