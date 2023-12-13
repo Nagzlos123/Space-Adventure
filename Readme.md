@@ -1,10 +1,12 @@
 # Space Adventure
 
-My bigest 2D game programed in C# and Unity.
+My second bigest 2D game programed in C# and Unity.
 
 ## Description
+Aplication is intended to provide multi-threaded gameplay combining a classic platform game with a shooter top down in which the player passes levels, 
+gains money and spend it in the store, which allows you to unlock new locations, skills and increasing your statistics.
 
-# Plot
+## Plot
 
 „Planet Coruss was my home. For many millennia my civilization has been
 guarding peace across the cosmos. But nothing lasts forever … My home was destroyed
@@ -14,7 +16,7 @@ In order to defeat the enemy you must destroy its mothership. The mothership is 
 guarded by a massive fleet, so you have to be prepared. In order to have a chance, you
 must gather all fragments of the ancient artefact scattered across planets."
 
-# Gameplay
+## Gameplay
 
 As we read in the plot, the player's goal is to complete the ancient artifact. Its fragments are found on one on each planet, but you cannot access them arrive. This happens because the player's ship does not have the appropriate modifications that would allow him to travel such long distances. Fortunately, there is a station nearby space where you can purchase the necessary parts:
 
