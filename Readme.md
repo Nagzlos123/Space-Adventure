@@ -48,7 +48,9 @@ starting with the first one, which is on Planet 1, the course of the game should
 7. After collecting all the fragments, the artifact must be merged - the user can do this do on the space station, which will allow him to travel to where the mothership belonging to the Empire of the Eternal Flame is located.
 8. Then the player destroys the fleet defending the mother ship, gets on board and destroys the main reactor, resulting in an explosion that destroys the ship.
 9. After destroying the mothership, a panel appears congratulating you on completing the game.
-    
+## Video
+![](GitHub_images/Spaceship&animation.gif)
+
 ## Images
 ![](GitHub_images/01_MainMenu.png)
 
